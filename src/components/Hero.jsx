@@ -33,10 +33,10 @@ export default function Hero() {
       }}
     >
       {/* Content */}
-      <div className="relative z-10 flex flex-col text-white h-full px-4 lg:pt-8 mt-15">
+      <div className="relative z-10 flex flex-col text-white h-full px-4 lg:p-8 mt-15">
         {/* Editing */}
 
-        <div className="flex flex-col lg:gap-10">
+        <div className="flex flex-col lg:gap-10 ">
           <div className="flex flex-col gap-y-2">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
               Best NIOS Coaching <br /> in Lucknow
@@ -48,7 +48,11 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="flex lg:justify-start justify-center gap-x-5 lg:mb-0 mb-3">
+        </div>
+        <div className="flex flex-col gap-3 mt-3">
+
+        
+          <div className="flex lg:justify-start justify-center gap-x-5 lg:mb-0 mb-3 ">
             {/* buttons */}
 
             <button className="lg:px-6 lg:py-3 p-3 bg-red-600 cursor-pointer hover:bg-red-700 rounded-2xl shadow-lg text-lg font-medium transition">
@@ -58,7 +62,7 @@ export default function Hero() {
               Learn More
             </button>
           </div>
-          <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 lg:mt-0 mt-10">
+          <div className="max-w-3xl mx-auto px-6 sm:px-6 lg:px-8 lg:mt-0 mt-10">
             {/* Responsive Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {boxes.map((box, index) => (
@@ -84,8 +88,7 @@ export default function Hero() {
               ))}
             </div>
           </div>
-        </div>
-
+</div>
         {/* Editing - end */}
 
         {/* <div className="mt-6 mb-2 flex gap-4">
