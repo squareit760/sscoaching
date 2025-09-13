@@ -30,7 +30,7 @@ export default function NNGLearnSection() {
               {/* Your image will go here */}
               <div className="text-gray-400 text-center opacity-50">
                 {/* <p className="text-sm">Image space reserved</p> */}
-                <img src="./public/images/online.webp" alt="" />
+                <img src="./images/online.webp" alt="" />
               </div>
             </div>
             

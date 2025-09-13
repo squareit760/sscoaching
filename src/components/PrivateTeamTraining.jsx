@@ -5,7 +5,7 @@ const PrivateTeamTraining = () => (
     {/* Left Side: Image */}
     <div className="lg:w-1/2 w-full h-[300px] lg:h-auto relative">
       <img
-        src="/image.jpg"  // Adjust path as needed
+        src="https://media.nngroup.com/static/img/banners/home-team-training_2x.jpg"
         alt="Team collaborating"
         className="object-cover w-full h-full"
       />
@@ -24,4 +24,5 @@ const PrivateTeamTraining = () => (
     </div>
   </div>
 );
+
 export default PrivateTeamTraining;
