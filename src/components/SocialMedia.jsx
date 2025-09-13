@@ -23,7 +23,7 @@ const SocialMedia = () => {
             <input
               type="email"
               placeholder="sscoching123@gmail.com"
-              className="px-4 py-3 rounded-l-full sm:rounded-full sm:rounded-r-none text-black focus:outline-none w-full sm:w-auto"
+              className="px-4 py-3 rounded-l-full sm:rounded-full sm:rounded-r-none bg-white text-black focus:outline-none w-full sm:w-auto"
             />
             <button className="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full sm:rounded-l-none font-semibold transition mt-3 sm:mt-0">
               Subscribe

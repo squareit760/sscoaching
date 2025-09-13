@@ -1,5 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { BiMobile } from "react-icons/bi";
 
 const Footer = () => {
     const [formData, setFormData] = React.useState({ name: "", mobile: "" });
@@ -20,7 +21,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="flex items-center">
               <img
-                src="https://via.placeholder.com/180x60/ffffff/000000?text=LOGO"
+                src="https://sscoaching.in/images/sslogo.jpg"
                 alt="Company Logo"
                 className="h-12 w-auto"
               />
@@ -65,8 +66,8 @@ const Footer = () => {
                 >
                   Services
                 </a>
-              </li> 
-              
+              </li>
+
               <li>
                 <a
                   href="#"
@@ -86,20 +87,30 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-red-300 mt-1 flex-shrink-0" />
                 <div className="text-gray-200 text-sm">
-                  <p>123 Business Street</p>
-                  <p>Suite 100, City, State 12345</p>
-                  <p>United States</p>
+                  <p>
+                    3rd Floor, Shree Chamber, <br /> Naza Computer Market, Near
+                    Basant Cinema, Hazratganj , Lucknow
+                  </p>
                 </div>
               </div>
 
+              <div className="flex items-center space-x-3">
+                <BiMobile className="h-5 w-5 text-red-300 flex-shrink-0" />
+                <a
+                  href="tel:+919839065533"
+                  className="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
+                >
+                  +919839065533
+                </a>
+              </div>
               {/* Phone */}
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-red-300 flex-shrink-0" />
                 <a
-                  href="tel:+1234567890"
+                  href="tel:05224029757"
                   className="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
                 >
-                  +1 (234) 567-8900
+                  0522-4029757
                 </a>
               </div>
 
@@ -107,10 +118,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-red-300 flex-shrink-0" />
                 <a
-                  href="mailto:contact@company.com"
+                  href="mailto:sscoachinglko@gmail.com"
                   className="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
                 >
-                  contact@company.com
+                  sscoachinglko@gmail.com
                 </a>
               </div>
             </div>

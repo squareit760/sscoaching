@@ -21,7 +21,7 @@ function App() {
       <PopularCoursesSection />
       <PrivateTeamTraining />
       <WhyNNGSection />
-      <SocialMedia />
+      {/* <SocialMedia /> */}
       <Footer />
     </>
   );
