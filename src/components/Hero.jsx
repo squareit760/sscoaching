@@ -20,7 +20,7 @@ export default function Hero() {
         description: "Students Enrolled",
       },
       {
-        icon: <Award />,
+        icon: <Award  />,
         title: "45",
         description: "Days to Pass",
       },
@@ -47,11 +47,8 @@ export default function Hero() {
               Your second chance for academic success starts here.
             </p>
           </div>
-
         </div>
         <div className="flex flex-col gap-3 mt-3">
-
-        
           <div className="flex lg:justify-start justify-center gap-x-5 lg:mb-0 mb-3 ">
             {/* buttons */}
 
@@ -68,10 +65,10 @@ export default function Hero() {
               {boxes.map((box, index) => (
                 <div
                   key={index}
-                  className="bg-white  rounded-lg lg:p-6 p-2 text-center hover:bg-opacity-60 transition  flex flex-col items-center justify-center"
+                  className="bg-white rounded-lg lg:p-6 p-2 text-center hover:bg-opacity-60 transition"
                 >
                   {/* Icon */}
-                  <div className="lg:h-10 lg:w-10 h-6 w-6 text-black mx-auto mb-3">
+                  <div className="lg:h-10 lg:w-10 h-4 w-6 text-black mx-auto mb-3  ">
                     {box.icon}
                   </div>
 
@@ -88,7 +85,7 @@ export default function Hero() {
               ))}
             </div>
           </div>
-</div>
+        </div>
         {/* Editing - end */}
 
         {/* <div className="mt-6 mb-2 flex gap-4">
