@@ -8,6 +8,8 @@ import PrivateTeamTraining from "./components/PrivateTeamTraining";
 import WhyNNGSection from "./components/WhyNNGSection";
 import SocialMedia from "./components/SocialMedia";
 import Footer from "./components/Footer";
+import ChampionChoice from "./components/ChampionChoice";
+import EnquiryForm from "./components/EnquiryForm";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -22,6 +24,8 @@ function App() {
       <PrivateTeamTraining />
       <WhyNNGSection />
       {/* <SocialMedia /> */}
+      <ChampionChoice />
+      <EnquiryForm />
       <Footer />
     </>
   );

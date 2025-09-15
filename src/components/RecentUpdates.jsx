@@ -4,65 +4,65 @@ const RecentArticlesSection = () => {
   const articles = [
     {
       id: 1,
-      title: "The VR Hype Cycle: Lessons for the Age of AI",
+      title: "Datesheet",
       author: "Caleb Sponheim",
       date: "Sep 5",
       type: "article",
       bgColor: "bg-slate-800",
       icon: "🥽"
     },
-    {
-      id: 2,
-      title: "Smart-Device Apps: 7 Best Practices to Make Devices Truly Smart",
-      author: "Tim Neusesser",
-      date: "Sep 5", 
-      type: "article",
-      bgColor: "bg-purple-200",
-      icon: "📱"
-    },
-    {
-      id: 3,
-      title: "User-Ecosystem Thinking: An Anthropologic Approach to Design",
-      author: "Therese Fessenden",
-      date: "Aug 29",
-      type: "article", 
-      bgColor: "bg-green-200",
-      icon: "👥"
-    }
+    // {
+    //   id: 2,
+    //   title: "Smart-Device Apps: 7 Best Practices to Make Devices Truly Smart",
+    //   author: "Tim Neusesser",
+    //   date: "Sep 5", 
+    //   type: "article",
+    //   bgColor: "bg-purple-200",
+    //   icon: "📱"
+    // },
+    // {
+    //   id: 3,
+    //   title: "User-Ecosystem Thinking: An Anthropologic Approach to Design",
+    //   author: "Therese Fessenden",
+    //   date: "Aug 29",
+    //   type: "article", 
+    //   bgColor: "bg-green-200",
+    //   icon: "👥"
+    // }
   ];
 
   const videos = [
     {
       id: 4,
-      title: "Template Trap",
+      title: "Hall Ticket",
       author: "Sarah Gibbons",
       duration: "6 min video",
       type: "video",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
-    {
-      id: 5, 
-      title: "Anatomy of Good Icons",
-      author: "Kelley Gordon",
-      duration: "3 min video",
-      type: "video",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      id: 6,
-      title: "Why Disabled Buttons Hurt UX (and How to Fix Them)",
-      author: "Huei-Hsin Wang", 
-      duration: "5 min video",
-      type: "video",
-      image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face"
-    }
+    // {
+    //   id: 5, 
+    //   title: "Anatomy of Good Icons",
+    //   author: "Kelley Gordon",
+    //   duration: "3 min video",
+    //   type: "video",
+    //   image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    // },
+    // {
+    //   id: 6,
+    //   title: "Why Disabled Buttons Hurt UX (and How to Fix Them)",
+    //   author: "Huei-Hsin Wang", 
+    //   duration: "5 min video",
+    //   type: "video",
+    //   image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face"
+    // }
   ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       {/* Header */}
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-        Recent Updates
+      Notice Board
       </h2>
 
       {/* Content Grid */}
@@ -128,11 +128,11 @@ const RecentArticlesSection = () => {
       </div>
 
       {/* More Articles & Videos Button */}
-      <div className="text-center">
+      {/* <div className="text-center">
         <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl">
           More Articles & Videos
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
