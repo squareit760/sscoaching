@@ -64,7 +64,7 @@ const WhyNNGSection = () => {
           {/* Image */}
           <div className="order-2 lg:order-1">
             <img 
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="./images/service.jpg" 
               alt="Person working at desk with laptop"
               className="w-full h-80 object-cover rounded-lg shadow-lg"
             />

@@ -5,7 +5,7 @@ const PrivateTeamTraining = () => (
     {/* Left Side: Image */}
     <div className="lg:w-1/2 w-full h-[300px] lg:h-auto relative">
       <img
-        src="https://media.nngroup.com/static/img/banners/home-team-training_2x.jpg"
+        src="./images/training.jpg"
         alt="Team collaborating"
         className="object-cover w-full h-full"
       />
