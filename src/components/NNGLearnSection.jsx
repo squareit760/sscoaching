@@ -4,7 +4,7 @@ import StudentSlider from './Slider';
 export default function NNGLearnSection() {
   return (
     <>
-    <section className="bg-gradient-to-b from-red-900 to-red-950 text-white py-5 mt-8 md:mt-12 ">
+    <section className="bg-gradient-to-b from-red-900 to-red-950 text-white py-5 ">
     <h1 className="text-3xl sm:text-4xl lg:text-3xl font-semibold text-white text-center">
               We Are The Best NIOS Coaching in Lucknow
             </h1>

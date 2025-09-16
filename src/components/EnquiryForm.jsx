@@ -2,7 +2,7 @@ import React from "react";
 
 const EnquiryForm = () => {
   return (
-    <div className="bg-white text-black py-6 px-4">
+    <div className="bg-white text-black py-10 px-4 border-t-3 border-b-3 border-blue-400">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-4">
         
         {/* Contact Info */}

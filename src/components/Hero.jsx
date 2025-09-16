@@ -27,7 +27,7 @@ export default function Hero() {
     ];
   return (
     <section
-      className="relative lg:h-[90vh] h-screen bg-cover bg-center"
+      className="relative lg:h-[90vh] h-screen bg-cover bg-center px-5"
       style={{
         backgroundImage: "url('/assets/image.png')", // replace with your image
       }}

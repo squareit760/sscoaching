@@ -14,7 +14,7 @@ const StudentSlider = () => {
       rollNumber: "210273243061",
       percentage: "95.2%",
       grade: "12th PCB",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/1.jpg",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const StudentSlider = () => {
       rollNumber: "210273243251",
       percentage: "95%",
       grade: "12th P.C.B",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/2.jpg",
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const StudentSlider = () => {
       rollNumber: "210273243186",
       percentage: "95%",
       grade: "12th PCB",
-      photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/5.jpg",
     },
     {
       id: 4,
@@ -38,7 +38,7 @@ const StudentSlider = () => {
       rollNumber: "210273243079",
       percentage: "95%",
       grade: "12th COMM.",
-      photo: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/4.jpg",
     },
     {
       id: 5,
@@ -46,7 +46,7 @@ const StudentSlider = () => {
       rollNumber: "210273243145",
       percentage: "94.8%",
       grade: "12th PCM",
-      photo: "https://images.unsplash.com/photo-1494790108755-2616b332c3c2?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/3.jpg",
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ const StudentSlider = () => {
       rollNumber: "210273243098",
       percentage: "94.5%",
       grade: "12th PCB",
-      photo: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/7.jpg",
     },
     {
       id: 7,
@@ -62,7 +62,7 @@ const StudentSlider = () => {
       rollNumber: "210273243234",
       percentage: "94.2%",
       grade: "12th ARTS",
-      photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/6.jpg",
     },
     {
       id: 8,
@@ -70,7 +70,7 @@ const StudentSlider = () => {
       rollNumber: "210273243167",
       percentage: "93.8%",
       grade: "12th PCM",
-      photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/8.jpg",
     },
     {
       id: 9,
@@ -78,7 +78,7 @@ const StudentSlider = () => {
       rollNumber: "210273243289",
       percentage: "93.5%",
       grade: "12th COMM.",
-      photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+      photo: "/assets/9.jpg",
     },
     {
       id: 10,
@@ -86,8 +86,8 @@ const StudentSlider = () => {
       rollNumber: "210273243156",
       percentage: "93.2%",
       grade: "12th PCB",
-      photo: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&h=150&fit=crop&crop=face"
-    }
+      photo: "/assets/10.jpg",
+    },
   ];
 
   return (
@@ -140,14 +140,14 @@ const StudentSlider = () => {
         >
           {students.map((student) => (
             <SwiperSlide key={student.id}>
-              <div className="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <div className="bg-white w-full rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <div className="p-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg overflow-hidden border-4 border-blue-300">
+                  <div className="flex justify-center mb-4 w-full">
+                    <div className="w-38 h-40 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg overflow-hidden border-4 border-blue-300">
                       <img
                         src={student.photo}
                         alt={student.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>

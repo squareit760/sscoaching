@@ -7,7 +7,9 @@ import "swiper/css/pagination";
 
 const WhyNNGSection = () => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8"
+    
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mb-16 text-center">
