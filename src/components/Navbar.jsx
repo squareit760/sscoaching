@@ -98,7 +98,7 @@ export default function Navbar() {
               <button
                 className={`flex items-center gap-1 transition-colors ${
                   isDropdownOpen ? "text-[#2563eb]" : "text-[#0a1f44]"
-                } hover:text-[#2563eb]`}
+                } hover:text-red-600`}
               >
                 Admissions
                 <ChevronDown
@@ -116,37 +116,46 @@ export default function Navbar() {
                     : "scale-95 opacity-0 invisible"
                 }`}
               >
-                <a href="#" className="dropdown-item">
-                  <ArrowRight className="w-4 h-4 mr-2" />
+                <a
+                  href="#"
+                  className="dropdown-item flex  py-2 px-1 hover:text-red-600"
+                >
+                  <ArrowRight className="w-4 h-4 mr-2 " />
                   Stream 1
                 </a>
-                <a href="#" className="dropdown-item">
+                <a
+                  href="#"
+                  className="dropdown-item flex  py-2 px-1 hover:text-red-600"
+                >
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Stream 2
                 </a>
-                <a href="#" className="dropdown-item">
+                <a
+                  href="#"
+                  className="dropdown-item flex py-2 px-1 hover:text-red-600"
+                >
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Stream 3 & 4
                 </a>
               </div>
             </div>
 
-            <a href="#" className="nav-link">
+            <a href="#" className="nav-link hover:text-red-600">
               Students Center
             </a>
-            <a href="#" className="nav-link">
+            <a href="#" className="nav-link hover:text-red-600">
               FAQs
             </a>
-            <a href="#" className="nav-link">
+            <a href="#" className="nav-link hover:text-red-600">
               Time Table
             </a>
-            <a href="#" className="nav-link">
+            <a href="#" className="nav-link hover:text-red-600">
               Results
             </a>
-            <a href="#" className="nav-link">
+            <a href="#" className="nav-link hover:text-red-600">
               Gallery
             </a>
-            <a href="#" className="nav-link">
+            <a href="#" className="nav-link hover:text-red-600">
               Contact Us
             </a>
           </nav>
