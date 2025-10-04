@@ -10,6 +10,18 @@ import Footer from "./components/Footer";
 import ChampionChoice from "./components/ChampionChoice";
 import EnquiryForm from "./components/EnquiryForm";
 import { Phone, Send, User, X } from "lucide-react";
+import UpdatesSection from "./components/Updates";
+import NIOSStreamsSection from "./components/RecentUpdates";
+import StatsSection from "./components/StatsSection";
+import EnquiryFormSection from "./components/HorEnquiryForm";
+import ToppersSection from "./components/ToppersSection";
+import SocialMediaFeedSection from "./components/SocialMediaSection";
+import TrustBadgesSection from "./components/TrustBadges";
+import QuestionPapersSection from "./components/PreviousPapers";
+import CelebritySection from "./components/Celebrity";
+import TestimonialsSection from "./components/Testimonials";
+import CTASection from "./components/CTASection";
+import FooterNew from "./components/FooterNew";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -51,12 +63,11 @@ function App() {
           className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg shadow-lg transition-all duration-300 hover:shadow-xl"
           style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
         >
-          <span className="text-sm font-medium tracking-wider">Contact Us</span>
+          <span className="text-sm font-medium tracking-wider">Enquire Now</span>
         </button>
       </div>
 
       {/* Overlay */}
-      
 
       {/* Compact Sliding Form */}
       <div
@@ -65,11 +76,11 @@ function App() {
         }`}
       >
         {/* Header */}
-        <div className="bg-slate-700 text-white px-4 py-3 rounded-tr-xl flex justify-between items-center">
+        <div className="bg-blue-700 text-white px-4 py-3 rounded-tr-xl flex justify-between items-center">
           <h2 className="text-lg font-semibold">Quick Enquiry</h2>
           <button
             onClick={() => setIsFormOpen(false)}
-            className="p-1 hover:bg-slate-600 rounded transition-colors duration-200"
+            className="p-1 hover:bg-slate-600 rounded transition-colors cursor-pointer duration-200"
           >
             <X size={18} />
           </button>
@@ -111,7 +122,7 @@ function App() {
             {/* Submit Button */}
             <button
               onClick={handleSubmit}
-              className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg text-sm"
+              className="w-full cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg text-sm"
             >
               <Send size={16} />
               Submit
@@ -126,15 +137,29 @@ function App() {
       </div>
       <Navbar />
       <SSCoachingHero />
-      <RecentArticlesSection />
-      <NNGLearnSection />
-      <PopularCoursesSection />
+      <UpdatesSection />
+      <NIOSStreamsSection />
+      <StatsSection />
+      <EnquiryFormSection />
+      <ToppersSection />
+      <SocialMediaFeedSection />
+      <TrustBadgesSection />
+      <QuestionPapersSection />
+      <CelebritySection />
+      <TestimonialsSection />
+      <CTASection />
+      <FooterNew />
+
+
+
+      {/* <NNGLearnSection /> */}
+      {/* <PopularCoursesSection />
       <PrivateTeamTraining />
-      <WhyNNGSection />
+      <WhyNNGSection /> */}
       {/* <SocialMedia /> */}
-      <ChampionChoice />
+      {/* <ChampionChoice />
       <EnquiryForm />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
