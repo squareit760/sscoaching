@@ -6,7 +6,7 @@ export default function HeroBanner() {
       className="relative h-[80vh] sm:h-screen min-h-[500px] text-white flex items-center justify-center text-center overflow-hidden"
       style={{
         backgroundImage:
-          'url("https://sscoaching.in/images/imparting-suggestions-to-students.jpg")',
+          'url("/images/banner-1.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
