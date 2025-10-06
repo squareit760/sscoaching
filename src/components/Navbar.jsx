@@ -80,7 +80,7 @@ export default function Navbar() {
           <a href="#">
             <img
               src="/images/sslogo.jpg"
-              className="h-14 sm:h-16 lg:h-20 object-contain"
+              className="h-14 sm:h-16 lg:h-14 object-contain"
               alt="SS Coaching Logo"
             />
           </a>
