@@ -84,7 +84,7 @@ export default function SocialMediaFeedSection() {
         {/* Section Header */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0a1f44] mb-4">
-            Campus Life & Success Stories
+            Understand NIOS: Admission, Exams & Benefits
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Follow us on social media to see daily updates, student
