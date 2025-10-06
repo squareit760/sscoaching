@@ -22,6 +22,7 @@ import CelebritySection from "./components/Celebrity";
 import TestimonialsSection from "./components/Testimonials";
 import CTASection from "./components/CTASection";
 import FooterNew from "./components/FooterNew";
+import EnquiryFormPopup from "./components/enquiry-form";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -56,26 +57,37 @@ function App() {
 
   return (
     <>
-      {/* Contact Us Button - Fixed on left side */}
-      <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-50">
+      {/* Enquire Now Button */}
+      <div
+        className="fixed left-0 z-50 flex items-center justify-center"
+        style={{
+          top: "50%",
+          transform: "translateY(-50%)",
+        }}
+      >
         <button
           onClick={() => setIsFormOpen(true)}
           className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg shadow-lg transition-all duration-300 hover:shadow-xl"
           style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
         >
-          <span className="text-sm font-medium tracking-wider">Enquire Now</span>
+          <span className="text-sm font-medium tracking-wider">
+            Enquire Now
+          </span>
         </button>
       </div>
 
-      {/* Overlay */}
-
-      {/* Compact Sliding Form */}
+      
       <div
-        className={`fixed left-0 top-1/2 transform -translate-y-1/2 w-80 sm:w-96 bg-white rounded-r-xl shadow-2xl z-50 transition-all duration-300 ease-in-out ${
+        className={`fixed z-50 top-1/2 left-0 w-80 sm:w-96 bg-white rounded-r-xl shadow-2xl transition-transform duration-300 ease-in-out ${
           isFormOpen ? "translate-x-0" : "-translate-x-full"
         }`}
+        style={{
+          transform: isFormOpen
+            ? "translateY(-50%) translateX(0)"
+            : "translateY(-50%) translateX(-100%)",
+        }}
       >
-        {/* Header */}
+        
         <div className="bg-blue-700 text-white px-4 py-3 rounded-tr-xl flex justify-between items-center">
           <h2 className="text-lg font-semibold">Quick Enquiry</h2>
           <button
@@ -86,10 +98,10 @@ function App() {
           </button>
         </div>
 
-        {/* Form Content */}
+        
         <div className="p-4">
           <div className="space-y-4">
-            {/* Name Input */}
+            
             <div className="relative">
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                 <User size={16} />
@@ -100,11 +112,11 @@ function App() {
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="Your Name"
-                className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-400 text-gray-700 text-sm"
+                className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-gray-700 text-sm"
               />
             </div>
 
-            {/* Mobile Input */}
+            
             <div className="relative">
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                 <Phone size={16} />
@@ -115,11 +127,11 @@ function App() {
                 value={formData.mobile}
                 onChange={handleInputChange}
                 placeholder="Mobile Number"
-                className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-400 text-gray-700 text-sm"
+                className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 text-gray-700 text-sm"
               />
             </div>
 
-            {/* Submit Button */}
+            
             <button
               onClick={handleSubmit}
               className="w-full cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-2.5 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg text-sm"
@@ -129,12 +141,14 @@ function App() {
             </button>
           </div>
 
-          {/* Additional Info */}
           <div className="mt-4 text-center text-gray-600 text-xs">
             <p>We'll get back to you within 24 hours</p>
           </div>
         </div>
       </div>
+
+      {/* <EnquiryFormPopup /> */}
+
       <Navbar />
       <SSCoachingHero />
       <UpdatesSection />
@@ -150,16 +164,14 @@ function App() {
       <CTASection />
       <FooterNew />
 
-
-
       {/* <NNGLearnSection /> */}
-      {/* <PopularCoursesSection />
-      <PrivateTeamTraining />
-      <WhyNNGSection /> */}
+      {/* <PopularCoursesSection />*/}
+      {/* <PrivateTeamTraining /> */}
+      {/* <WhyNNGSection />  */}
       {/* <SocialMedia /> */}
-      {/* <ChampionChoice />
-      <EnquiryForm />
-      <Footer /> */}
+      {/* <ChampionChoice />*/}
+      {/* <EnquiryForm /> */}
+      {/* <Footer />  */}
     </>
   );
 }

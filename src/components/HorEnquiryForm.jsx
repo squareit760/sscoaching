@@ -152,7 +152,7 @@ export default function EnquiryFormSection() {
               <div className="md:col-span-1">
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-[#0a1f44] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center group"
+                  className="w-full cursor-pointer bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-[#0a1f44] font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center group"
                 >
                   <PhoneCall className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                   Request a Callback

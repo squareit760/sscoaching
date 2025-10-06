@@ -20,28 +20,27 @@ export default function UpdatesSection() {
   ];
 
   return (
-    <div className="bg-[#0a1f44] text-white py-3 overflow-hidden relative">
-      <div className="container mx-auto px-4 flex items-center">
+    <div className="bg-[#0a1f44] text-white py-2 sm:py-3 overflow-hidden relative">
+      <div className="container mx-auto px-3 sm:px-4 flex items-center">
         {/* Updates Badge */}
-        <span className="bg-yellow-400 text-[#0a1f44] font-bold text-sm px-4 py-2 rounded-md mr-4 flex-shrink-0 flex items-center shadow-lg">
-          <Megaphone className="w-4 h-4 mr-2" />
+        <span className="bg-yellow-400 text-[#0a1f44] font-bold text-[10px] sm:text-xs md:text-sm px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-md mr-2 sm:mr-4 flex-shrink-0 flex items-center shadow-md whitespace-nowrap">
+          <Megaphone className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
           UPDATES
         </span>
 
         {/* Scrolling Updates */}
         <div className="flex-grow overflow-hidden">
-          <div className="animate-scroll whitespace-nowrap">
-            {/* Render updates twice for seamless loop */}
+          <div className="animate-scroll whitespace-nowrap text-[11px] sm:text-sm md:text-base leading-tight sm:leading-normal">
             {[...updates, ...updates].map((update, index) => (
               <span key={index} className="inline-block">
                 <a
                   href={update.link}
                   className="hover:text-yellow-400 transition inline-flex items-center"
                 >
-                  <update.icon className="w-4 h-4 mr-2" />
-                  {update.text}
+                  <update.icon className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                  <span className="truncate">{update.text}</span>
                 </a>
-                <span className="mx-6 text-yellow-400">|</span>
+                <span className="mx-3 sm:mx-6 text-yellow-400">|</span>
               </span>
             ))}
           </div>
@@ -61,23 +60,23 @@ export default function UpdatesSection() {
         .animate-scroll {
           display: inline-block;
           animation: scroll 30s linear infinite;
-          padding-left: 2rem;
+          padding-left: 1rem;
         }
 
         .animate-scroll:hover {
           animation-play-state: paused;
         }
 
-        /* Responsive adjustments */
+        /* Faster scroll for smaller devices */
         @media (max-width: 768px) {
           .animate-scroll {
-            animation-duration: 25s;
+            animation-duration: 20s;
           }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 480px) {
           .animate-scroll {
-            animation-duration: 20s;
+            animation-duration: 15s;
           }
         }
       `}</style>

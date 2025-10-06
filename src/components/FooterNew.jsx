@@ -12,7 +12,10 @@ import {
   Smartphone,
   Send,
   Heart,
+  X,
 } from "lucide-react";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 export default function FooterNew() {
   const [formData, setFormData] = useState({
@@ -44,14 +47,11 @@ export default function FooterNew() {
               href="#"
               className="text-2xl sm:text-3xl font-extrabold text-white mb-6 inline-flex items-center"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                <span className="text-blue-950 font-bold text-sm sm:text-base">
-                  SS
-                </span>
-              </div>
-              <span>
-                SS<span className="text-blue-400">Coaching</span>
-              </span>
+              <img
+                src="/images/sslogo.jpg"
+                className="h-14 sm:h-16 lg:h-20 object-contain bg-white p-2"
+                alt="SS Coaching Logo"
+              />
             </a>
 
             <div className="space-y-4 mt-6">
@@ -80,28 +80,28 @@ export default function FooterNew() {
 
             <div className="flex space-x-3 mt-6">
               <a
-                href="#"
+                href="https://www.facebook.com/SSCoachingLucknow"
                 className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white hover:bg-blue-400 transition"
               >
-                <Facebook className="w-4 h-4" />
+                <FaFacebook className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://x.com/SSCoachingTwit"
                 className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white hover:bg-blue-400 transition"
               >
-                <Twitter className="w-4 h-4" />
+                <X className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/sscoaching_lucknow/"
                 className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white hover:bg-blue-400 transition"
               >
-                <Instagram className="w-4 h-4" />
+                <FaInstagram className="w-4 h-4" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/c/SscoachingInlucknow"
                 className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-white hover:bg-blue-400 transition"
               >
-                <Youtube className="w-4 h-4" />
+                <FaYoutube className="w-4 h-4" />
               </a>
             </div>
           </div>
