@@ -9,7 +9,7 @@ import WhyNNGSection from "./components/WhyNNGSection";
 import Footer from "./components/Footer";
 import ChampionChoice from "./components/ChampionChoice";
 import EnquiryForm from "./components/EnquiryForm";
-import { Phone, Send, User, X } from "lucide-react";
+import { Phone, PhoneCall, Send, User, X } from "lucide-react";
 import UpdatesSection from "./components/Updates";
 import NIOSStreamsSection from "./components/RecentUpdates";
 import StatsSection from "./components/StatsSection";
@@ -23,6 +23,7 @@ import TestimonialsSection from "./components/Testimonials";
 import CTASection from "./components/CTASection";
 import FooterNew from "./components/FooterNew";
 import EnquiryFormPopup from "./components/enquiry-form";
+import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -58,11 +59,11 @@ function App() {
   return (
     <>
       {/* Enquire Now Button */}
-      <div
-        className="fixed left-0 z-50 flex items-center justify-center"
+      {/* <div
+        className="fixed right-0 z-50 flex items-center justify-center"
         style={{
           top: "50%",
-          transform: "translateY(-50%)",
+          transform: "translateY(50%)",
         }}
       >
         <button
@@ -145,9 +146,28 @@ function App() {
             <p>We'll get back to you within 24 hours</p>
           </div>
         </div>
+      </div> */}
+
+      {/* Floating CTA Buttons */}
+      <div className="fixed bottom-4 left-4 flex flex-col gap-3 z-50">
+        <a
+          href="tel:+919935035316"
+          className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center transition duration-300"
+        >
+          <PhoneCall className="w-5 h-5" />
+        </a>
+
+        <a
+          href="https://wa.me/919935035316"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center transition duration-300"
+        >
+          <FaWhatsapp className="w-5 h-5" />
+        </a>
       </div>
 
-      {/* <EnquiryFormPopup /> */}
+      <EnquiryFormPopup />
 
       <Navbar />
       <SSCoachingHero />

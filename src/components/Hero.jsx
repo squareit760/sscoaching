@@ -32,7 +32,7 @@ export default function HeroBanner() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 animate-fade-in-delay-2">
           <a
-            href="#contact"
+            href="https://sscoaching.in/contact"
             className="bg-yellow-400 text-[#0a1f44] font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-yellow-500 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-yellow-400/50 flex items-center group"
           >
             <UserPlus className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -40,7 +40,7 @@ export default function HeroBanner() {
           </a>
 
           <a
-            href="#streams"
+            href="https://www.youtube.com/c/SscoachingInlucknow"
             className="bg-white bg-opacity-20 text-black font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-opacity-30 transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-sm flex items-center group"
           >
             <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:scale-110 transition-transform" />

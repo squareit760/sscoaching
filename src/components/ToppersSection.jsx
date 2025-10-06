@@ -4,38 +4,41 @@ export default function ToppersSection() {
   const toppers = [
     {
       id: 1,
-      name: "Aarav Singh",
-      percentage: "94.6%",
-      rollNo: "123456789",
-      class: "Sr. Secondary",
-      image: "/assets/1.jpg",
+      name: "ANSHIKA RAJ",
+      percentage: "96.4%",
+      rollNo: "210273243113",
+      class: "12th   PCB",
+      image:
+        "https://sscoaching.in/walladmin/result/thumb_fde68IMG-20250625-WA0001.jpg",
       icons: [Trophy, Medal, Star],
     },
     {
       id: 2,
-      name: "Priya Sharma",
-      percentage: "92.8%",
-      rollNo: "987654321",
-      class: "Secondary",
-      image: "/assets/3.jpg",
+      name: "ARPITA YADAV",
+      percentage: "96.2%",
+      rollNo: "210273243110",
+      class: "12th PCB",
+      image:
+        "https://sscoaching.in/walladmin/result/thumb_b57a1IMG-20250625-WA0002.jpg",
       icons: [Trophy, Medal, Award],
     },
     {
       id: 3,
-      name: "Rohan Verma",
-      percentage: "91.2%",
-      rollNo: "456789123",
-      class: "Sr. Secondary",
-      image: "/assets/7.jpg",
+      name: "AYUSHI RAI",
+      percentage: "96%",
+      rollNo: "210273243213",
+      class: "12th PCM",
+      image: "https://sscoaching.in/walladmin/result/thumb_8faaeAYUSHI-RAI.jpg",
       icons: [Trophy, Medal, Star],
     },
     {
       id: 4,
-      name: "Anjali Gupta",
-      percentage: "90.5%",
-      rollNo: "789123456",
-      class: "Secondary",
-      image: "/assets/6.jpg",
+      name: "ROSHAN CHHETRI",
+      percentage: "96%",
+      rollNo: "210273243011",
+      class: "12th PCB",
+      image:
+        "https://sscoaching.in/walladmin/result/thumb_f38c1ROHAN-CHHETRI.jpg",
       icons: [Trophy, Award, Star],
     },
   ];
@@ -45,12 +48,11 @@ export default function ToppersSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-4">
-            Our Shining Stars
+          <h2 className="text-4xl md:text-4xl font-bold text-[#0a1f44] mb-4">
+            Our Shining NIOS Stars
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are proud of our students' achievements. They inspire us to do
-            better every day.
+            Success Stories from the Best NIOS Center in Lucknow
           </p>
         </div>
 
@@ -100,7 +102,7 @@ export default function ToppersSection() {
         {/* View All Link */}
         <div className="mt-16 text-center">
           <a
-            href="#"
+            href="https://sscoaching.in/result"
             className="inline-flex items-center text-[#2563eb] font-semibold text-lg group hover:text-[#1e40af] transition-colors"
           >
             View All Success Stories

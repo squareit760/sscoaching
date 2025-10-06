@@ -1,12 +1,12 @@
 export default function StatsSection() {
   const stats = [
-    { id: "years", label: "Years of Experience", value: "10", suffix: "+" },
-    { id: "students", label: "Students Enrolled", value: "2500", suffix: "+" },
+    { id: "years", label: "Years of Experience", value: "25", suffix: "+" },
+    { id: "students", label: "Students Passed", value: "1Lakh", suffix: "+" },
     { id: "success", label: "Success Rate", value: "95", suffix: "%" },
     {
       id: "satisfaction",
       label: "Satisfaction Rate",
-      value: "98",
+      value: "99",
       suffix: "%",
     },
   ];

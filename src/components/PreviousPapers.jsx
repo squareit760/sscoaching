@@ -8,12 +8,25 @@ export default function QuestionPapersSection() {
       headerGradient: "from-[#2563eb] to-[#0a1f44]",
       textColor: "text-white",
       papers: [
-        { subject: "Mathematics (2024)", file: "#" },
-        { subject: "Science & Tech (2024)", file: "#" },
-        { subject: "English (2023)", file: "#" },
-        { subject: "Social Science (2023)", file: "#" },
+        {
+          subject: "Mathematics (2025)",
+          file: "https://sscoaching.in/files/secondary/nios-mathematics-211-secondary-question-paper-april-2025.pdf",
+        },
+        {
+          subject: "Science (2025)",
+          file: "https://sscoaching.in/files/secondary/nios-science-212-secondary-question-paper-april-2025.pdf",
+        },
+        {
+          subject: "English (2025)",
+          file: "https://sscoaching.in/files/secondary/nios-english-202-secondary-question-paper-april-2025.pdf",
+        },
+        {
+          subject: "Social Science (2025)",
+          file: "https://sscoaching.in/files/secondary/nios-social-science-213-secondary-question-paper-april-2025.pdf",
+        },
       ],
       viewAllText: "View All 10th Papers",
+      href: "https://sscoaching.in/papers-secondary-10th_148.html",
     },
     {
       id: 2,
@@ -21,33 +34,46 @@ export default function QuestionPapersSection() {
       headerGradient: "from-yellow-400 to-yellow-500",
       textColor: "text-[#0a1f44]",
       papers: [
-        { subject: "Physics (2024)", file: "#" },
-        { subject: "Chemistry (2024)", file: "#" },
-        { subject: "Business Studies (2023)", file: "#" },
-        { subject: "Accountancy (2023)", file: "#" },
+        {
+          subject: "Physics (2025)",
+          file: "https://sscoaching.in/files/srsecondary/nios-physics-312-sr-secondary-question-paper-april-2025.pdf",
+        },
+        {
+          subject: "Chemistry (2025)",
+          file: "https://sscoaching.in/files/srsecondary/nios-chemistry-313-sr-secondary-question-paper-april-2025.pdf",
+        },
+        {
+          subject: "Business Studies (2025)",
+          file: "https://sscoaching.in/files/srsecondary/nios-business-studies-319-sr-secondary-question-paper-april-2025.pdf",
+        },
+        {
+          subject: "Accountancy (2025)",
+          file: "https://sscoaching.in/files/srsecondary/nios-accountancy-320-sr-secondary-question-paper-april-2025.pdf",
+        },
       ],
       viewAllText: "View All 12th Papers",
+      href: "https://sscoaching.in/papers-senior-secondary-12th_3281.html",
     },
   ];
 
   const resources = [
     {
       icon: Book,
-      title: "Download Syllabus",
+      title: "Download Syllabus Class 10th",
       description: "Latest curriculum for all subjects",
-      link: "#",
+      link: "https://sscoaching.in/for-secondary-xth10th_31.html",
     },
     {
       icon: FileCheck,
-      title: "Download Prospectus",
+      title: "Download Syllabus Class 12th",
       description: "Complete admission information",
-      link: "#",
+      link: "https://sscoaching.in/for-senior-secondary-xiith12th_32.html",
     },
     {
       icon: Video,
       title: "Video Lectures",
       description: "Learn from expert faculty",
-      link: "#",
+      link: "https://www.youtube.com/c/SscoachingInlucknow",
     },
   ];
 
@@ -112,7 +138,7 @@ export default function QuestionPapersSection() {
 
                 {/* View All Button */}
                 <a
-                  href="#"
+                  href={card.href}
                   className="mt-6 w-full text-center bg-[#0a1f44] text-white font-semibold py-3 rounded-lg hover:bg-[#0d2844] transition flex items-center justify-center"
                 >
                   <Eye className="w-5 h-5 mr-2" />

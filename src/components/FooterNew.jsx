@@ -4,10 +4,6 @@ import {
   Mail,
   MapPin,
   ChevronRight,
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
   User,
   Smartphone,
   Send,
@@ -15,13 +11,11 @@ import {
   X,
 } from "lucide-react";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
+import { BsTelephone } from "react-icons/bs";
+import { BiMobile } from "react-icons/bi";
 
 export default function FooterNew() {
-  const [formData, setFormData] = useState({
-    name: "",
-    mobile: "",
-  });
+  const [formData, setFormData] = useState({ name: "", mobile: "" });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,11 +25,41 @@ export default function FooterNew() {
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  // Replace these URLs with your actual page URLs
+  const quickLinks = [
+    { label: "About Us", url: "https://sscoaching.in/About-Us_2.html" },
+    {
+      label: "NIOS Admissions",
+      url: "https://sscoaching.in/Admission-in-NIOS-Stream-1_24.html",
+    },
+    { label: "Results", url: "https://sscoaching.in/result" },
+    { label: "FAQs", url: "https://sscoaching.in/faq" },
+    { label: "Contact Us", url: "https://sscoaching.in/contact" },
+    // { label: "FAQs", url: "/faqs" },
+  ];
+
+  const resourcesLinks = [
+    {
+      label: "Question Papers",
+      url: "https://sscoaching.in/ques-papers_147.html",
+    },
+    {
+      label: "Syllabus",
+      url: "https://sscoaching.in/for-secondary-xth10th_31.html",
+    },
+    {
+      label: "Study Material",
+      url: "https://sscoaching.in//nios-paper_3303.html",
+    },
+    {
+      label: "Time Table",
+      url: "https://sscoaching.in/timing-hazratgunj_140.html",
+    },
+    // { label: "Prospectus", url: "/prospectus" },
+  ];
 
   return (
     <footer className="bg-blue-950 text-gray-300 pt-16 pb-8" id="contact">
@@ -44,7 +68,7 @@ export default function FooterNew() {
           {/* Section 1: Logo & Address */}
           <div>
             <a
-              href="#"
+              href="/"
               className="text-2xl sm:text-3xl font-extrabold text-white mb-6 inline-flex items-center"
             >
               <img
@@ -63,18 +87,25 @@ export default function FooterNew() {
                 </span>
               </p>
               <a
-                href="tel:+911234567890"
+                href="tel:+919839065533"
                 className="flex items-center hover:text-blue-400 transition"
               >
-                <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
-                +91 123-456-7890
+                <BiMobile className="w-5 h-5 mr-3 flex-shrink-0" />
+                +91 9839065533
               </a>
               <a
-                href="mailto:info@sscoaching.com"
+                href="tel:05224029757"
+                className="flex items-center hover:text-blue-400 transition"
+              >
+                <BsTelephone className="w-5 h-5 mr-3 flex-shrink-0" />
+                0522-4029757
+              </a>
+              <a
+                href="mailto:sscoachinglko@gmail.com"
                 className="flex items-center hover:text-blue-400 transition"
               >
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
-                info@sscoaching.com
+                sscoachinglko@gmail.com
               </a>
             </div>
 
@@ -110,21 +141,14 @@ export default function FooterNew() {
           <div>
             <h4 className="text-xl font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {[
-                "About Us",
-                "NIOS Admissions",
-                "Results",
-                "Blogs",
-                "Contact Us",
-                "FAQs",
-              ].map((link) => (
-                <li key={link}>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
                   <a
-                    href="#"
+                    href={link.url}
                     className="hover:text-blue-400 transition flex items-center group"
                   >
                     <ChevronRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -135,20 +159,14 @@ export default function FooterNew() {
           <div>
             <h4 className="text-xl font-bold text-white mb-6">Resources</h4>
             <ul className="space-y-3">
-              {[
-                "Question Papers",
-                "Syllabus",
-                "Study Material",
-                "Time Table",
-                "Prospectus",
-              ].map((resource) => (
-                <li key={resource}>
+              {resourcesLinks.map((resource) => (
+                <li key={resource.label}>
                   <a
-                    href="#"
+                    href={resource.url}
                     className="hover:text-blue-400 transition flex items-center group"
                   >
                     <ChevronRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {resource}
+                    {resource.label}
                   </a>
                 </li>
               ))}

@@ -17,9 +17,10 @@ export default function NIOSStreamsSection() {
       circlePosition: "-top-10 -right-10",
       features: [
         "Direct admission to 10th/12th",
-        "No need to repeat previous class",
+        "No need to repeat 9th/11th class",
         "Save one full academic year",
       ],
+      href: "https://sscoaching.in/Admission-in-NIOS-Stream-1_24.html",
     },
     {
       id: 2,
@@ -39,6 +40,7 @@ export default function NIOSStreamsSection() {
         "Transfer of marks from previous board",
         "Appear only for failed subjects",
       ],
+      href: "https://sscoaching.in/Admission-in-NIOS-Stream-2_25.html",
     },
     {
       id: 3,
@@ -58,6 +60,7 @@ export default function NIOSStreamsSection() {
         "Fast results in 30-45 days",
         "Flexible exam scheduling",
       ],
+      href: "https://sscoaching.in/Admission-in-NIOS-Stream-3-and-4_27.html",
     },
   ];
 
@@ -73,7 +76,7 @@ export default function NIOSStreamsSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-4">
+          <h2 className="text-4xl md:text-4xl font-bold text-[#0a1f44] mb-4">
             Your Path to Success with NIOS
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -130,7 +133,7 @@ export default function NIOSStreamsSection() {
 
                 {/* Learn More Link */}
                 <a
-                  href="#"
+                  href={stream.href}
                   className={`inline-flex items-center ${stream.accentColor} font-semibold group-hover:underline`}
                 >
                   Learn More

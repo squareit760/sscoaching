@@ -1,91 +1,89 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import {
-  ChevronLeft,
-  ChevronRight,
   Youtube,
   Instagram,
   Play,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function SocialMediaFeedSection() {
-  const scrollContainerRef = useRef(null);
   const [playingVideo, setPlayingVideo] = useState(null);
 
   const videos = [
     {
       id: 1,
-      src: "https://www.instagram.com/reel/DN0GKmNQgTY/",
+      src: "https://www.instagram.com/reel/DKwqFc0pSF-/?utm_source=ig_web_copy_link",
       title: "Campus Tour",
       platform: "instagram",
       handle: "@SSCoaching",
+      thumbnail: "/images/insta-reel1.png",
     },
     {
       id: 2,
-      src: "https://www.youtube.com/watch?v=XAgOkjMsdHc",
+      src: "https://www.youtube.com/shorts/dNDKZaAcCOo",
       title: "Result Celebration",
       platform: "youtube",
       handle: "@SSCoaching",
     },
     {
       id: 3,
-      src: "https://www.youtube.com/watch?v=iHUAXdHbI-s",
+      src: "https://www.youtube.com/shorts/VtjftJEnO4o",
       title: "Study Session",
       platform: "youtube",
       handle: "@SSCoaching",
     },
     {
       id: 4,
-      src: "https://www.instagram.com/reel/DNOCgJeCphD/",
+      src: "https://www.instagram.com/reel/DK1hEYeJsaO/?utm_source=ig_web_copy_link",
       title: "Classroom Moments",
       platform: "instagram",
       handle: "@SSCoaching",
+      thumbnail: "/images/insta-reel2.png",
     },
   ];
 
-  const scroll = (direction) => {
-    if (scrollContainerRef.current) {
-      const scrollAmount = 300;
-      scrollContainerRef.current.scrollTo({
-        left:
-          scrollContainerRef.current.scrollLeft +
-          (direction === "left" ? -scrollAmount : scrollAmount),
-        behavior: "smooth",
-      });
-    }
+  const getYoutubeId = (url) => {
+    const match = url.match(/(?:v=|shorts\/)([a-zA-Z0-9_-]{11})/);
+    return match ? match[1] : null;
   };
 
   const getThumbnail = (video) => {
+    if (video.thumbnail) return video.thumbnail;
     if (video.platform === "youtube") {
-      const match = video.src.match(/v=([^&]+)/);
-      return match
-        ? `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg`
-        : "/placeholder.jpg";
-    } else if (video.platform === "instagram") {
-      // Instagram blocks direct thumbnail access
-      return "/instagram-placeholder.jpg";
-    } else {
-      return "/video-placeholder.jpg";
+      const id = getYoutubeId(video.src);
+      return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
     }
+    return "/video-placeholder.jpg";
   };
 
   const getEmbedUrl = (video) => {
     if (video.platform === "youtube") {
-      const match = video.src.match(/v=([^&]+)/);
-      return match
-        ? `https://www.youtube.com/embed/${match[1]}?autoplay=1`
+      const id = getYoutubeId(video.src);
+      return id
+        ? `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`
         : video.src;
     } else if (video.platform === "instagram") {
-      return `${video.src}embed`;
+      // ✅ Instagram oEmbed format — works inline
+      const baseUrl = video.src.split("?")[0]; // remove tracking params
+      return `${baseUrl}embed`;
     } else {
-      return video.src;
+      return null;
     }
   };
 
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
+        {/* Section Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0a1f44] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0a1f44] mb-4">
             Campus Life & Success Stories
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -94,17 +92,28 @@ export default function SocialMediaFeedSection() {
           </p>
         </div>
 
+        {/* Swiper Carousel */}
         <div className="relative">
-          <div
-            ref={scrollContainerRef}
-            className="flex overflow-x-auto space-x-4 md:space-x-6 snap-x snap-mandatory scrollbar-hide px-2"
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            pagination={{ clickable: true }}
+            spaceBetween={20}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            className="pb-10"
           >
             {videos.map((video) => (
-              <div
-                key={video.id}
-                className="flex-shrink-0 w-64 sm:w-72 md:w-80 snap-start"
-              >
-                <div className="bg-black rounded-2xl overflow-hidden shadow-lg relative aspect-[9/16]">
+              <SwiperSlide key={video.id}>
+                <div className="bg-black rounded-2xl overflow-hidden shadow-lg relative aspect-[9/16] group">
+                  {/* If currently playing */}
                   {playingVideo === video.id ? (
                     <iframe
                       src={getEmbedUrl(video)}
@@ -119,11 +128,13 @@ export default function SocialMediaFeedSection() {
                         alt={video.title}
                         className="w-full h-full object-cover"
                       />
+
+                      {/* Play Button */}
                       <button
                         onClick={() => setPlayingVideo(video.id)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition"
+                        className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition"
                       >
-                        <Play className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-white opacity-90" />
+                        <Play className="w-14 h-14 text-white opacity-90" />
                       </button>
                     </>
                   )}
@@ -132,44 +143,62 @@ export default function SocialMediaFeedSection() {
                   <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-black via-black/70 to-transparent text-white">
                     <div className="flex items-center">
                       <div
-                        className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center mr-2 sm:mr-3 ${
+                        className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center mr-3 ${
                           video.platform === "youtube"
                             ? "bg-[#0a1f44]"
                             : "bg-gradient-to-r from-purple-500 to-pink-500"
                         }`}
                       >
                         {video.platform === "youtube" ? (
-                          <Youtube className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                          <Youtube className="w-5 h-5 text-white" />
                         ) : (
-                          <Instagram className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                          <Instagram className="w-5 h-5 text-white" />
                         )}
                       </div>
                       <div>
-                        <p className="font-semibold text-sm sm:text-base">
-                          {video.title}
-                        </p>
                         <p className="text-xs opacity-80">{video.handle}</p>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
 
-          {/* Scroll buttons (hidden on mobile) */}
-          <button
-            onClick={() => scroll("left")}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 sm:p-3 shadow-lg opacity-80 hover:opacity-100 transition hidden md:block hover:scale-110"
-          >
+          {/* Navigation Arrows */}
+          <button className="swiper-button-prev absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 sm:p-3 shadow-lg opacity-80 hover:opacity-100 transition hidden md:flex">
             <ChevronLeft className="w-5 h-5 text-[#0a1f44]" />
           </button>
-          <button
-            onClick={() => scroll("right")}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 sm:p-3 shadow-lg opacity-80 hover:opacity-100 transition hidden md:block hover:scale-110"
-          >
+          <button className="swiper-button-next absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 sm:p-3 shadow-lg opacity-80 hover:opacity-100 transition hidden md:flex">
             <ChevronRight className="w-5 h-5 text-[#0a1f44]" />
           </button>
+        </div>
+      </div>
+      <div className="text-center mt-10">
+        <h2 className="text-gray-400 text-lg mb-8 font-medium">
+          Follow us for more updates and behind-the-scenes content
+        </h2>
+
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a
+            href="https://www.youtube.com/c/SscoachingInlucknow"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            <FaYoutube className="w-6 h-6" />
+            <span>YouTube</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/sscoaching_lucknow/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-full transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            <FaInstagram className="w-6 h-6" />
+            <span>Instagram</span>
+          </a>
         </div>
       </div>
     </section>

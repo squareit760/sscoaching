@@ -27,14 +27,14 @@ export default function CTASection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
           <a
-            href="#contact"
+            href="tel:+916392644822"
             className="group bg-yellow-400 text-blue-900 font-bold text-lg px-8 py-4 rounded-full hover:bg-yellow-300 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-2xl hover:shadow-yellow-400/50 flex items-center"
           >
             <Phone className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-            Call Now: +91 123-456-7890
+            Call Now: +91 6392644822
           </a>
           <a
-            href="#contact"
+            href="mailto:sscoachinglko@gmail.com"
             className="bg-white/20 text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-white/30 transition-all duration-300 transform hover:-translate-y-1 backdrop-blur-sm flex items-center"
           >
             <Mail className="w-5 h-5 mr-2" />

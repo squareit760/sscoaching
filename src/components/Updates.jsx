@@ -4,18 +4,23 @@ export default function UpdatesSection() {
   const updates = [
     {
       icon: Calendar,
-      text: "NIOS October 2025 Exam Datesheet Announced! Download Now.",
-      link: "#",
+      text: "Updated NIOS Syllabus For 10th 2025.",
+      link: "https://sscoaching.in/for-secondary-xth10th_31.html",
+    },
+    {
+      icon: Calendar,
+      text: "Updated NIOS Syllabus For 12th 2025.",
+      link: "https://sscoaching.in/for-senior-secondary-xiith12th_32.html",
     },
     {
       icon: Trophy,
       text: "Senior Secondary Result for April 2025 Declared. Check Here.",
-      link: "#",
+      link: "https://sscoaching.in/result",
     },
     {
       icon: FileText,
       text: "New Question Papers for 2025-26 Session Uploaded.",
-      link: "#",
+      link: "https://sscoaching.in/ques-papers_147.html",
     },
   ];
 

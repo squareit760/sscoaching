@@ -62,24 +62,35 @@ export default function EnquiryFormPopup() {
 
           <div
             className=" relative bg-white shadow-2xl p-4 sm:p-6 rounded-xl
-    w-[90%] max-w-[400px] mx-auto border-2 border-orange-400"
+    w-[90%] max-w-[400px] mx-auto border-2 border-sky-400"
           >
             <div className="flex justify-center mb-4">
               <img
-                src="/images/rishita-logo.webp"
+                src="/images/sslogo.jpg"
                 alt="Logo"
                 className="h-12 w-auto"
               />
             </div>
 
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-bold text-orange-600">
-                EXPRESS YOUR INTEREST
-              </h2>
-              <button onClick={() => setShowForm(false)}>
-                <X className="text-red-600 absolute top-2 right-2 cursor-pointer w-5 h-5" />
-              </button>
+            <div className="flex justify-center mb-4 gap-y-3">
+              <div className="flex flex-col items-center">
+                <h2 className="text-lg font-normal text-blue-600">
+                  Failed in 10th or 12th?
+                </h2>
+
+                <h2 className="text-lg font-light text-blue-600">
+                  Clear Your Exams in 45 Days
+                </h2>
+
+                <h2 className="text-lg font-normal text-blue-600">
+                  Get NIOS Admissions Now!
+                </h2>
+                <span className="text-red-600 font-semibold animate-pulse">Enroll Now!</span>
+              </div>
             </div>
+            <button onClick={() => setShowForm(false)}>
+              <X className="text-blue-600 absolute top-2 right-2 cursor-pointer w-5 h-5" />
+            </button>
 
             <form onSubmit={handleSubmit}>
               <input
@@ -88,27 +99,27 @@ export default function EnquiryFormPopup() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Name*"
-                className="w-full mb-3 p-3 border border-orange-300 rounded bg-orange-50"
+                className="w-full mb-3 p-3 border border-sky-300 rounded bg-blue-50"
               />
-              <input
+              {/* <input
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Email*"
-                className="w-full mb-3 p-3 border border-orange-300 rounded bg-orange-50"
-              />
+                className="w-full mb-3 p-3 border border-sky-300 rounded bg-blue-50"
+              /> */}
               <input
                 type="tel"
                 name="mobile"
                 value={form.mobile}
                 onChange={handleChange}
                 placeholder="Mobile*"
-                className="w-full mb-4 p-3 border border-orange-300 rounded bg-orange-50"
+                className="w-full mb-4 p-3 border border-sky-300 rounded bg-blue-50"
               />
               <button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded"
+                className="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 rounded"
               >
                 SUBMIT
               </button>

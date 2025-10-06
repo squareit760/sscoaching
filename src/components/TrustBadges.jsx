@@ -5,7 +5,7 @@ export default function TrustBadgesSection() {
     {
       id: 1,
       icon: Clock,
-      title: "10+ Years of Experience",
+      title: "25+ Years of Experience",
       description:
         "Guiding NIOS students to success for over a decade with proven results and expert faculty.",
     },
@@ -37,8 +37,8 @@ export default function TrustBadgesSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-4">
-            Why Trust SS Coaching?
+          <h2 className="text-4xl md:text-4xl font-bold text-[#0a1f44] mb-4">
+            Why Trust SS Coaching for NIOS Coaching & Admission?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We are committed to your academic excellence and future success.

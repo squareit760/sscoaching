@@ -33,8 +33,8 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-4">
-            What Our Students Say
+          <h2 className="text-4xl md:text-4xl font-bold text-[#0a1f44] mb-4">
+            What Our Students Say About SS Coaching?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from our successful students about their experience with SS
